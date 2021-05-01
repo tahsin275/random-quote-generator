@@ -105,3 +105,8 @@ function printQuote(){
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
+
+// Auto refresh the code every 10 second
+
+setInterval(printQuote,10000);
