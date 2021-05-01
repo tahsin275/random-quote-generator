@@ -97,6 +97,10 @@ h1 {
   margin-right: 4em;
 }
 
+.tag{
+  font-weight: 500;
+}
+
 .source:before {
   content: "—";
 }
