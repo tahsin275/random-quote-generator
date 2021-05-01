@@ -3,13 +3,7 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
-
-/*** 
- * `quotes` array 
-***/
+// Array containing all the quotes
 
 const quotes = [
   {
@@ -84,9 +78,8 @@ const quotes = [
 // console.log(quotes);
 
 
-/***
- * `getRandomQuote` function
-***/
+// Function for picking a quote randomly
+// from the quotes array
 
 function getRandomQuote(arr){
   const length = arr.length;
@@ -99,7 +92,7 @@ function getRandomQuote(arr){
 // console.log(getRandomQuote(quotes).quote);
 
 
-// check if a color is dark or light
+// Function to check if a color is dark or light
 // code snippets by Andreas Wik from Codepen.io
 function lightOrDark(color) {
 
@@ -147,9 +140,7 @@ function lightOrDark(color) {
 
 
 
-/***
- * `printQuote` function
-***/
+// Function to print quote on the page
 
 function printQuote(){
   // assigning a random quote into a variable
@@ -186,7 +177,7 @@ function printQuote(){
   const year = quoteObj.year;
   const tag = quoteObj.tags;
   let html;
-  //  conditional rendering of html
+  //  conditional rendering of html variable
   if (cite && year && tag){
     html = `
     <p class="quote">${quote}</p>
@@ -257,14 +248,13 @@ function printQuote(){
   document.getElementById('quote-box').innerHTML = html;
 }
 
-
+// Display a random quote when
+// the user visits the webpage
 printQuote();
 
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
+// Repond to users click events
+// when a user press 'show another quote' button
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
 
